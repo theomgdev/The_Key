@@ -1,0 +1,64 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	<LinearLayout
+		android:id="@+id/header"
+		android:layout_width="match_parent"
+		android:layout_height="60dp"
+		android:padding="10dp"
+		android:background="#607D8B"
+		android:gravity="center_horizontal|center_vertical"
+		android:orientation="horizontal">
+		<LinearLayout
+			android:id="@+id/linear_title"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:gravity="center_vertical"
+			android:orientation="vertical"
+			android:layout_weight="1">
+			<TextView
+				android:id="@+id/title"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="left|center_vertical"
+				android:text="My Lists"
+				android:textSize="20sp"
+				android:textStyle="bold"
+				android:textColor="#FFFFFF"
+				android:layout_weight="1" />
+		</LinearLayout>
+		<ImageView
+			android:id="@+id/btn_new_list"
+			android:layout_width="32dp"
+			android:layout_height="46dp"
+			android:src="@drawable/ic_add_white"
+			android:scaleType="fitCenter" />
+	</LinearLayout>
+	<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+		android:id="@+id/swipe_refresh"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:layout_weight="1">
+		<ListView
+			android:id="@+id/listOfLists"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:padding="8dp"
+			android:choiceMode="none" />
+	</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+	<TextView
+		android:id="@+id/credits"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="2dp"
+		android:gravity="center_horizontal|bottom"
+		android:text="Small yet precious light by Cahit Karahan to the dark 🌱"
+		android:textSize="10sp"
+		android:textColor="#757575"
+		android:layout_gravity="right|bottom" />
+</LinearLayout>

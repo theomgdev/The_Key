@@ -1,0 +1,78 @@
+[
+    {
+        "merged": "C:\\Android\\Projects\\The_Key\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_add_white.png.flat",
+        "source": "C:\\Android\\Projects\\The_Key\\app\\src\\main\\res\\drawable-xhdpi\\ic_add_white.png"
+    },
+    {
+        "merged": "C:\\Android\\Projects\\The_Key\\app\\build\\intermediates\\res\\merged\\release\\layout_list_of_lists_item.xml.flat",
+        "source": "C:\\Android\\Projects\\The_Key\\app\\src\\main\\res\\layout\\list_of_lists_item.xml"
+    },
+    {
+        "merged": "C:\\Android\\Projects\\The_Key\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_arrow_drop_down_black.png.flat",
+        "source": "C:\\Android\\Projects\\The_Key\\app\\src\\main\\res\\drawable-xhdpi\\ic_arrow_drop_down_black.png"
+    },
+    {
+        "merged": "C:\\Android\\Projects\\The_Key\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_arrow_drop_up_black.png.flat",
+        "source": "C:\\Android\\Projects\\The_Key\\app\\src\\main\\res\\drawable-xhdpi\\ic_arrow_drop_up_black.png"
+    },
+    {
+        "merged": "C:\\Android\\Projects\\The_Key\\app\\build\\intermediates\\res\\merged\\release\\layout_todo.xml.flat",
+        "source": "C:\\Android\\Projects\\The_Key\\app\\src\\main\\res\\layout\\todo.xml"
+    },
+    {
+        "merged": "C:\\Android\\Projects\\The_Key\\app\\build\\intermediates\\res\\merged\\release\\layout_new_list.xml.flat",
+        "source": "C:\\Android\\Projects\\The_Key\\app\\src\\main\\res\\layout\\new_list.xml"
+    },
+    {
+        "merged": "C:\\Android\\Projects\\The_Key\\app\\build\\intermediates\\res\\merged\\release\\layout__drawer_main.xml.flat",
+        "source": "C:\\Android\\Projects\\The_Key\\app\\src\\main\\res\\layout\\_drawer_main.xml"
+    },
+    {
+        "merged": "C:\\Android\\Projects\\The_Key\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_checkbox_checked.png.flat",
+        "source": "C:\\Android\\Projects\\The_Key\\app\\src\\main\\res\\drawable-xhdpi\\checkbox_checked.png"
+    },
+    {
+        "merged": "C:\\Android\\Projects\\The_Key\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_checkbox_empty.png.flat",
+        "source": "C:\\Android\\Projects\\The_Key\\app\\src\\main\\res\\drawable-xhdpi\\checkbox_empty.png"
+    },
+    {
+        "merged": "C:\\Android\\Projects\\The_Key\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_info_outline_white.png.flat",
+        "source": "C:\\Android\\Projects\\The_Key\\app\\src\\main\\res\\drawable-xhdpi\\ic_info_outline_white.png"
+    },
+    {
+        "merged": "C:\\Android\\Projects\\The_Key\\app\\build\\intermediates\\res\\merged\\release\\layout_todo_add_edit.xml.flat",
+        "source": "C:\\Android\\Projects\\The_Key\\app\\src\\main\\res\\layout\\todo_add_edit.xml"
+    },
+    {
+        "merged": "C:\\Android\\Projects\\The_Key\\app\\build\\intermediates\\res\\merged\\release\\layout_toast.xml.flat",
+        "source": "C:\\Android\\Projects\\The_Key\\app\\src\\main\\res\\layout\\toast.xml"
+    },
+    {
+        "merged": "C:\\Android\\Projects\\The_Key\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_default_image.png.flat",
+        "source": "C:\\Android\\Projects\\The_Key\\app\\src\\main\\res\\drawable-xhdpi\\default_image.png"
+    },
+    {
+        "merged": "C:\\Android\\Projects\\The_Key\\app\\build\\intermediates\\res\\merged\\release\\layout_main.xml.flat",
+        "source": "C:\\Android\\Projects\\The_Key\\app\\src\\main\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "C:\\Android\\Projects\\The_Key\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_format_list_bulleted_white.png.flat",
+        "source": "C:\\Android\\Projects\\The_Key\\app\\src\\main\\res\\drawable-xhdpi\\ic_format_list_bulleted_white.png"
+    },
+    {
+        "merged": "C:\\Android\\Projects\\The_Key\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_logo.png.flat",
+        "source": "C:\\Android\\Projects\\The_Key\\app\\src\\main\\res\\drawable-xhdpi\\logo.png"
+    },
+    {
+        "merged": "C:\\Android\\Projects\\The_Key\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_app_icon.png.flat",
+        "source": "C:\\Android\\Projects\\The_Key\\app\\src\\main\\res\\drawable-xhdpi\\app_icon.png"
+    },
+    {
+        "merged": "C:\\Android\\Projects\\The_Key\\app\\build\\intermediates\\res\\merged\\release\\layout_time_select.xml.flat",
+        "source": "C:\\Android\\Projects\\The_Key\\app\\src\\main\\res\\layout\\time_select.xml"
+    },
+    {
+        "merged": "C:\\Android\\Projects\\The_Key\\app\\build\\intermediates\\res\\merged\\release\\layout_splash.xml.flat",
+        "source": "C:\\Android\\Projects\\The_Key\\app\\src\\main\\res\\layout\\splash.xml"
+    }
+]
