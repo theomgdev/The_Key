@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:2:1-43:12
+ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:2:1-41:12
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\Mücahit Karahan\.gradle\caches\transforms-2\files-2.1\c19cceefc79f68b9d089afeb792cdb30\material-1.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Mücahit Karahan\.gradle\caches\transforms-2\files-2.1\111d54cef6cbfd8541a58f0bf7311840\constraintlayout-2.0.1\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\Mücahit Karahan\.gradle\caches\transforms-2\files-2.1\a8b42ac286dd9c66b03608cb239a3680\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
@@ -38,20 +38,20 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Mücahit Karah
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Mücahit Karahan\.gradle\caches\transforms-2\files-2.1\0bdb89301a9d350fd74aca3d3fce6209\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Mücahit Karahan\.gradle\caches\transforms-2\files-2.1\c62d50667cf67aaf383c1ccd7292e2ce\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Mücahit Karahan\.gradle\caches\transforms-2\files-2.1\d1bd3929f4a158c443373e008cd22977\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:2:1-43:12
-INJECTED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:2:1-43:12
+INJECTED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:2:1-41:12
 	package
 		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:4:2-35
 		INJECTED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml
-		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:2:1-43:12
+		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:2:1-41:12
 		INJECTED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml
-		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:2:1-43:12
+		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:2:1-41:12
 		INJECTED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:3:2-60
@@ -63,12 +63,8 @@ uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:6:2-78
 	android:name
 		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:6:19-75
-uses-permission#android.permission.WRITE_MEDIA_STORAGE
-ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:9:2-75
-	android:name
-		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:9:19-72
 application
-ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:11:2-42:16
+ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:10:2-40:16
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\Mücahit Karahan\.gradle\caches\transforms-2\files-2.1\c19cceefc79f68b9d089afeb792cdb30\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\Mücahit Karahan\.gradle\caches\transforms-2\files-2.1\c19cceefc79f68b9d089afeb792cdb30\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Mücahit Karahan\.gradle\caches\transforms-2\files-2.1\111d54cef6cbfd8541a58f0bf7311840\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
@@ -78,37 +74,41 @@ MERGED from [androidx.core:core:1.5.0] C:\Users\Mücahit Karahan\.gradle\caches\t
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Mücahit Karahan\.gradle\caches\transforms-2\files-2.1\d2bbb5c931cbfd2239c610c2dba8ea08\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Mücahit Karahan\.gradle\caches\transforms-2\files-2.1\d2bbb5c931cbfd2239c610c2dba8ea08\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 	android:requestLegacyExternalStorage
-		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:15:3-46
+		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:14:3-46
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.5.0] C:\Users\Mücahit Karahan\.gradle\caches\transforms-2\files-2.1\8cadf76ebf1ec2c9fadb44e37ad37d1b\core-1.5.0\AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:14:3-35
+		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:13:3-35
 	android:icon
-		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:13:3-36
+		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:12:3-36
 	android:allowBackup
-		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:12:3-29
+		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:11:3-29
 	android:theme
-		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:17:3-34
+		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:16:3-34
 	android:usesCleartextTraffic
-		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:16:3-38
+		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:15:3-38
 activity#com.cahitkarahan.thekey.MainActivity
-ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:18:3-23:43
+ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:17:3-23:43
 	android:screenOrientation
 		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:23:4-40
 	android:hardwareAccelerated
-		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:21:4-38
+		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:20:4-38
+	android:exported
+		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:22:4-27
 	android:supportsPictureInPicture
-		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:22:4-43
+		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:21:4-43
 	android:configChanges
-		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:20:4-97
+		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:19:4-97
 	android:name
-		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:19:4-32
+		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:18:4-32
 activity#com.cahitkarahan.thekey.SplashActivity
-ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:24:3-35:14
+ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:24:3-36:14
 	android:screenOrientation
-		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:30:4-40
+		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:31:4-40
 	android:hardwareAccelerated
 		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:27:4-38
+	android:exported
+		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:30:4-27
 	android:supportsPictureInPicture
 		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:28:4-43
 	android:configChanges
@@ -118,27 +118,21 @@ ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:24:3-35:
 	android:name
 		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:25:4-34
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:31:4-34:20
+ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:32:4-35:20
 action#android.intent.action.MAIN
-ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:32:5-57
+ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:33:5-57
 	android:name
-		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:32:13-54
+		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:33:13-54
 category#android.intent.category.LAUNCHER
-ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:33:5-65
+ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:34:5-65
 	android:name
-		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:33:15-62
-activity#com.cahitkarahan.thekey.DebugActivity
-ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:36:3-38:43
-	android:screenOrientation
-		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:38:4-40
-	android:name
-		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:37:4-33
+		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:34:15-62
 uses-library#org.apache.http.legacy
-ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:39:3-41:31
+ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:37:3-39:31
 	android:required
-		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:41:4-28
+		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:39:4-28
 	android:name
-		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:40:4-41
+		ADDED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:38:4-41
 uses-sdk
 INJECTED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml

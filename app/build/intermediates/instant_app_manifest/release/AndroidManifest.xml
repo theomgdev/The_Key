@@ -13,7 +13,6 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
@@ -28,12 +27,14 @@
         <activity
             android:name="com.cahitkarahan.thekey.MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:exported="true"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
             android:supportsPictureInPicture="true" />
         <activity
             android:name="com.cahitkarahan.thekey.SplashActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:exported="true"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait"
             android:supportsPictureInPicture="true"
@@ -44,9 +45,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.cahitkarahan.thekey.DebugActivity"
-            android:screenOrientation="portrait" />
 
         <uses-library
             android:name="org.apache.http.legacy"

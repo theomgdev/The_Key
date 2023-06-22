@@ -22,80 +22,75 @@
 14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 14-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:5:2-77
 14-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:5:19-74
-15    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
-15-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:9:2-75
-15-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:9:19-72
-16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-16-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:6:2-78
-16-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:6:19-75
-17
-18    <application
-18-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:11:2-42:16
-19        android:allowBackup="true"
-19-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:12:3-29
-20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-20-->[androidx.core:core:1.5.0] C:\Users\Mücahit Karahan\.gradle\caches\transforms-2\files-2.1\8cadf76ebf1ec2c9fadb44e37ad37d1b\core-1.5.0\AndroidManifest.xml:24:18-86
-21        android:extractNativeLibs="false"
-22        android:icon="@drawable/app_icon"
-22-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:13:3-36
-23        android:label="@string/app_name"
-23-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:14:3-35
-24        android:requestLegacyExternalStorage="true"
-24-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:15:3-46
-25        android:theme="@style/AppTheme"
-25-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:17:3-34
-26        android:usesCleartextTraffic="true" >
-26-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:16:3-38
-27        <activity
-27-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:18:3-23:43
-28            android:name="com.cahitkarahan.thekey.MainActivity"
-28-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:19:4-32
-29            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
-29-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:20:4-97
+15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+15-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:6:2-78
+15-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:6:19-75
+16
+17    <application
+17-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:10:2-40:16
+18        android:allowBackup="true"
+18-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:11:3-29
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.5.0] C:\Users\Mücahit Karahan\.gradle\caches\transforms-2\files-2.1\8cadf76ebf1ec2c9fadb44e37ad37d1b\core-1.5.0\AndroidManifest.xml:24:18-86
+20        android:extractNativeLibs="false"
+21        android:icon="@drawable/app_icon"
+21-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:12:3-36
+22        android:label="@string/app_name"
+22-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:13:3-35
+23        android:requestLegacyExternalStorage="true"
+23-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:14:3-46
+24        android:theme="@style/AppTheme"
+24-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:16:3-34
+25        android:usesCleartextTraffic="true" >
+25-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:15:3-38
+26        <activity
+26-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:17:3-23:43
+27            android:name="com.cahitkarahan.thekey.MainActivity"
+27-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:18:4-32
+28            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+28-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:19:4-97
+29            android:exported="true"
+29-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:22:4-27
 30            android:hardwareAccelerated="true"
-30-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:21:4-38
+30-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:20:4-38
 31            android:screenOrientation="portrait"
 31-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:23:4-40
 32            android:supportsPictureInPicture="true" />
-32-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:22:4-43
+32-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:21:4-43
 33        <activity
-33-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:24:3-35:14
+33-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:24:3-36:14
 34            android:name="com.cahitkarahan.thekey.SplashActivity"
 34-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:25:4-34
 35            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
 35-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:26:4-97
-36            android:hardwareAccelerated="true"
-36-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:27:4-38
-37            android:screenOrientation="portrait"
-37-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:30:4-40
-38            android:supportsPictureInPicture="true"
-38-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:28:4-43
-39            android:theme="@style/AppTheme.FullScreen" >
-39-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:29:4-46
-40            <intent-filter>
-40-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:31:4-34:20
-41                <action android:name="android.intent.action.MAIN" />
-41-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:32:5-57
-41-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:32:13-54
-42
-43                <category android:name="android.intent.category.LAUNCHER" />
-43-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:33:5-65
-43-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:33:15-62
-44            </intent-filter>
-45        </activity>
-46        <activity
-46-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:36:3-38:43
-47            android:name="com.cahitkarahan.thekey.DebugActivity"
-47-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:37:4-33
-48            android:screenOrientation="portrait" />
-48-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:38:4-40
-49
-50        <uses-library
-50-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:39:3-41:31
-51            android:name="org.apache.http.legacy"
-51-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:40:4-41
-52            android:required="false" />
-52-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:41:4-28
-53    </application>
-54
-55</manifest>
+36            android:exported="true"
+36-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:30:4-27
+37            android:hardwareAccelerated="true"
+37-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:27:4-38
+38            android:screenOrientation="portrait"
+38-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:31:4-40
+39            android:supportsPictureInPicture="true"
+39-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:28:4-43
+40            android:theme="@style/AppTheme.FullScreen" >
+40-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:29:4-46
+41            <intent-filter>
+41-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:32:4-35:20
+42                <action android:name="android.intent.action.MAIN" />
+42-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:33:5-57
+42-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:33:13-54
+43
+44                <category android:name="android.intent.category.LAUNCHER" />
+44-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:34:5-65
+44-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:34:15-62
+45            </intent-filter>
+46        </activity>
+47
+48        <uses-library
+48-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:37:3-39:31
+49            android:name="org.apache.http.legacy"
+49-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:38:4-41
+50            android:required="false" />
+50-->C:\Android\Projects\The_Key\app\src\main\AndroidManifest.xml:39:4-28
+51    </application>
+52
+53</manifest>
