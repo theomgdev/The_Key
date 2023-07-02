@@ -1,39 +1,34 @@
 package com.cahitkarahan.thekey;
 
-import com.cahitkarahan.thekey.SplashActivity;
 import android.Manifest;
-import android.animation.*;
-import android.app.*;
 import android.app.AlertDialog;
-import android.content.*;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.content.res.*;
-import android.graphics.*;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.graphics.Typeface;
-import android.graphics.drawable.*;
-import android.media.*;
-import android.net.*;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
-import android.os.*;
 import android.os.Bundle;
-import android.text.*;
-import android.text.style.*;
-import android.util.*;
-import android.view.*;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.*;
-import android.view.animation.*;
-import android.webkit.*;
-import android.widget.*;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
-import androidx.annotation.*;
+import android.widget.Toast;
+
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -42,26 +37,27 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener;
+
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import java.io.*;
-import java.io.InputStream;
-import java.text.*;
-import java.text.DecimalFormat;
-import java.util.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.regex.*;
-import org.json.*;
+
 import org.ocpsoft.prettytime.PrettyTime;
-import java.io.File;
+
+import java.io.File;
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
+
 
 public class MainActivity extends AppCompatActivity {
 	
@@ -194,8 +190,9 @@ public class MainActivity extends AppCompatActivity {
 				dialogMan.getWindow().findViewById(R.id.design_bottom_sheet).setBackground(new ColorDrawable(0xFFFFFFFF));
 				error = false;
 				final EditText edit_thetext = (EditText) bottomSheetView.findViewById(R.id.edit_thetext);
-				if (defaultHints.containsKey(listOfTheLists.get((int)activeListId).get("name").toString())) {
-					edit_thetext.setHint(defaultHints.get(listOfTheLists.get((int)activeListId).get("name").toString()).toString());
+				String hintKey = listOfTheLists.get((int)activeListId).get("name").toString().split(" ")[0];
+				if (defaultHints.containsKey(hintKey)) {
+					edit_thetext.setHint(defaultHints.get(hintKey).toString());
 				}
 				else {
 					edit_thetext.setHint(defaultHints.get("default").toString());
@@ -434,7 +431,8 @@ public class MainActivity extends AppCompatActivity {
 							for (int j = 0; j < (int)(listOfTheLists.size()); j++) {
 								if (listOfTheLists.get((int)j).get("name").toString().equals(temp.get("name").toString())) {
 									_load_list(j);
-									_drawer_listOfLists.smoothScrollToPosition((int)(j));
+									_drawer_listOfLists.setSelection((int)j);
+									todoList.setSelection((int)0);
 									_drawer.closeDrawer(GravityCompat.START);
 								}
 							}
@@ -467,14 +465,14 @@ finish();
 		timeOptions.add("3 Years");
 		timeOptions.add("5 Years");
 		timeOptions.add("10 Years or more");
-		defaultHints.put("Goals", "What to do if everything went perfectly on the road?");
-		defaultHints.put("Turn-Ons", "Which events turn me onto life?");
-		defaultHints.put("Turn-Offs", "Which events turn me off from life?");
-		defaultHints.put("Rules & Advices", "Which rules should I follow on my journey of life?");
-		defaultHints.put("Help", "What should I know about the app and Jim Rohn's methodology?");
+		defaultHints.put("🎯", "What to do if everything went perfectly on the road?");
+		defaultHints.put("🔥", "Which events turn me onto life?");
+		defaultHints.put("💤", "Which events turn me off from life?");
+		defaultHints.put("📐", "Which rules should I follow on my journey of life?");
+		defaultHints.put("ℹ️", "What should I know about the app and Jim Rohn's methodology?");
 		defaultHints.put("default", "What's on my mind?");
 		todoList.setAdapter(new TodoListAdapter(activeList));
-		listspath = FileUtil.getExternalStorageDir().concat("/.thekey");
+		listspath = FileUtil.getPackageDataDir(getApplicationContext());
 		FileUtil.makeDir(listspath);
 		_load_all_lists(false);
 		if (listOfTheLists.size() < 1) {
@@ -773,10 +771,16 @@ finish();
 			}
 		}
 	}
+	public void showMessage(String message){
+		_toast_error_or_not(message, "");
+	}
+	{
+	}
 	
 	
 	public void _load_defaults() {
 		String defaultsPath = "defaults_".concat(Locale.getDefault().getLanguage().concat(".zip"));
+		Log.d("Load defaults",defaultsPath);
 		try{
 			MainActivity.this.getAssets().open(defaultsPath);
 		}catch(Exception e){
@@ -807,6 +811,7 @@ finish();
 	
 	public void _save_list(final String _path) {
 		_sort_active_list();
+		Log.i("Save list",_path);
 		FileUtil.writeFile(_path, new Gson().toJson(activeList));
 		_load_all_lists(true);
 		_load_list(activeListId);
@@ -814,13 +819,19 @@ finish();
 	
 	
 	public void _save_active_list() {
+		Log.i("Save active list","");
 		_save_list(ohListOfTheLists.get((int)(activeListId)));
 	}
 	
 	
 	public void _load_list(final double _id) {
+		Log.i("Load list",String.valueOf((long)(_id)));
 		todoListPos = todoList.getFirstVisiblePosition();
 		int topPos = (todoList.getChildAt(0)) == null ? 0 : (todoList.getChildAt(0).getTop() - todoList.getPaddingTop());
+		if ((_id > ohListOfTheLists.size()) || (_id == ohListOfTheLists.size())) {
+			_toast_error_or_not("List ID is not found in the list: ".concat(String.valueOf((long)(_id)).concat(" / ".concat(String.valueOf((long)(ohListOfTheLists.size()))))), "error");
+			return ;
+		}
 		if (FileUtil.isExistFile(ohListOfTheLists.get((int)(_id))) && FileUtil.isFile(ohListOfTheLists.get((int)(_id)))) {
 			try{
 				activeList = new Gson().fromJson(FileUtil.readFile(ohListOfTheLists.get((int)(_id))), new TypeToken<ArrayList<HashMap<String, Object>>>(){}.getType());
@@ -990,6 +1001,17 @@ finish();
 				data.put("priority_highlight", true);
 				listProps.remove((int)(listProps.indexOf("P")));
 			}
+			for (int k = ((int) listProps.size() - 1); k > -1; k--) {
+				try{
+					data.put("order", (int)(Integer.parseInt(listProps.get((int)(k)))));
+					listProps.remove((int)(k));
+				}catch(Exception e){
+					 
+				}
+			}
+			if (!data.containsKey("order")) {
+				data.put("order", (int)(9999999999d));
+			}
 			try{
 				java.io.File file = new java.io.File(_listOfLists.get((int)(i)));
 				Date lastModDate = new Date(file.lastModified());
@@ -1021,6 +1043,7 @@ finish();
 			data.put("name", listProps.get((int)(0)));
 			dataOfLists.add(data);
 		}
+		Log.i("Parse all lists",String.valueOf((long)(dataOfLists.size())));
 		return dataOfLists;
 	}
 	
@@ -1032,7 +1055,18 @@ finish();
 		if (ohListOfTheLists.contains(listspath.concat("/backup.zip"))) {
 			ohListOfTheLists.remove((int)(ohListOfTheLists.indexOf(listspath.concat("/backup.zip"))));
 		}
+		Log.i("Load all lists",new Gson().toJson(ohListOfTheLists));
 		listOfTheLists = _parseListOfLists(ohListOfTheLists);
+		for(int _repeat76 = 0; _repeat76 < (int)(listOfTheLists.size()); _repeat76++) {
+			for (int i = 0; i < (int)(listOfTheLists.size()); i++) {
+				if (i > 0) {
+					if (Integer.parseInt(listOfTheLists.get((int)i).get("order").toString()) < Integer.parseInt(listOfTheLists.get((int)i-1).get("order").toString())) {
+						Collections.swap(listOfTheLists, (int)(i), (int)(i-1));
+						Collections.swap(ohListOfTheLists, (int)(i), (int)(i-1));
+					}
+				}
+			}
+		}
 		if (_reloadView) {
 			_drawer_listOfLists.setAdapter(new _drawer_listOfListsAdapter(listOfTheLists));
 			_drawer_listOfLists.setSelectionFromTop((int)listOfListsPos, topPos);
@@ -1097,16 +1131,27 @@ finish();
 				}
 			});
 			if (!(activeListId == _position)) {
-				list_name.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/roboto.ttf"), 0);
-				linear_list_container.setTag(_position);
-				linear_list_container.setOnClickListener(new View.OnClickListener(){ public void onClick(View _view){
+				list_name.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/roboto.ttf"), Typeface.NORMAL);
+			}
+			else {
+				list_name.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/roboto.ttf"), Typeface.BOLD);
+			}
+			linear_list_container.setTag(_position);
+			linear_list_container.setOnClickListener(new View.OnClickListener(){ public void onClick(View _view){
+					if (!(activeListId == (int)_view.getTag())) {
 						_load_list((int)_view.getTag());
+						todoList.setSelection((int)0);
 						_drawer.closeDrawer(GravityCompat.START);
 					}
-				});
-				linear_list_container.setOnLongClickListener(new View.OnLongClickListener() {
-					@Override
-					public boolean onLongClick(View _view) {
+					else {
+						_toast_error_or_not("The list is already selected.", "error");
+					}
+				}
+			});
+			linear_list_container.setOnLongClickListener(new View.OnLongClickListener() {
+				@Override
+				public boolean onLongClick(View _view) {
+					if (!(activeListId == (int)_view.getTag())) {
 						ran = (int)_view.getTag();
 						AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
 						builder.setCancelable(true);
@@ -1119,7 +1164,7 @@ finish();
 									//POSITIVE
 								FileUtil.deleteFile(ohListOfTheLists.get((int)(ran)));
 								_load_all_lists(true);
-								SketchwareUtil.CustomToastWithIcon(getApplicationContext(), "The list is successfully deleted.  ", 0xFFFFFFFF, 12, 0xFF607D8B, 360, SketchwareUtil.BOTTOM, R.drawable.ic_info_outline_white);
+								_toast_error_or_not("The list is successfully deleted.", "");
 							}
 						});
 						builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
@@ -1131,27 +1176,14 @@ finish();
 						
 						AlertDialog dialog = builder.create();
 						dialog.show();
-						return true;
 					}
-				});
-			}
-			else {
-				linear_list_container.setOnClickListener(new View.OnClickListener() {
-					@Override
-					public void onClick(View _view) {
-						SketchwareUtil.CustomToastWithIcon(getApplicationContext(), "The list is already selected.  ", 0xFFFFFFFF, 12, 0xFF607D8B, 360, SketchwareUtil.BOTTOM, R.drawable.ic_info_outline_white);
+					else {
+						_toast_error_or_not("Can't edit or delete. The list is in use. Please deselect the list.", "error");
 					}
-				});
-				linear_list_container.setOnLongClickListener(new View.OnLongClickListener() {
-					@Override
-					public boolean onLongClick(View _view) {
-						SketchwareUtil.CustomToastWithIcon(getApplicationContext(), "Can't edit or delete. The list is in use. Please deselect the list.  ", 0xFFFFFFFF, 12, 0xFF607D8B, 360, SketchwareUtil.BOTTOM, R.drawable.ic_info_outline_white);
-						return true;
-					}
-				});
-				list_name.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/roboto.ttf"), 1);
-			}
-			list_name.setText("🔹 ".concat(_data.get((int)_position).get("name").toString()));
+					return true;
+				}
+			});
+			list_name.setText(_data.get((int)_position).get("name").toString());
 			if (_data.get((int)_position).containsKey("date")) {
 				list_date.setText(_data.get((int)_position).get("date").toString());
 			}
@@ -1262,10 +1294,10 @@ finish();
 				thetext.setText(listItem.get("text").toString());
 			}
 			if (listItem.containsKey("isHighlighted") && (boolean)listItem.get("isHighlighted")) {
-				thetext.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/roboto.ttf"), 1);
+				thetext.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/roboto.ttf"), Typeface.BOLD);
 			}
 			else {
-				thetext.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/roboto.ttf"), 0);
+				thetext.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/roboto.ttf"), Typeface.NORMAL);
 			}
 			if (listItem.containsKey("isChecked") && (boolean)listItem.get("isChecked")) {
 				check_toggle.setImageResource(R.drawable.checkbox_checked);
@@ -1376,7 +1408,7 @@ finish();
 								//POSITIVE
 							activeList.remove(listItem);
 							_save_active_list();
-							SketchwareUtil.CustomToastWithIcon(getApplicationContext(), "List item is successfully deleted.  ", 0xFFFFFFFF, 12, 0xFF607D8B, 360, SketchwareUtil.BOTTOM, R.drawable.ic_info_outline_white);
+							_toast_error_or_not("List item is successfully deleted.", "");
 						}
 					});
 					builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
@@ -1401,8 +1433,9 @@ finish();
 					
 					dialogMan.getWindow().findViewById(R.id.design_bottom_sheet).setBackground(new ColorDrawable(0xFFFFFFFF));
 					final EditText edit_thetext = (EditText) bottomSheetView.findViewById(R.id.edit_thetext);
-					if (defaultHints.containsKey(listOfTheLists.get((int)activeListId).get("name").toString())) {
-						edit_thetext.setHint(defaultHints.get(listOfTheLists.get((int)activeListId).get("name").toString()).toString());
+					String hintKey = listOfTheLists.get((int)activeListId).get("name").toString().split(" ")[0];
+					if (defaultHints.containsKey(hintKey)) {
+						edit_thetext.setHint(defaultHints.get(hintKey).toString());
 					}
 					else {
 						edit_thetext.setHint(defaultHints.get("default").toString());
@@ -1492,55 +1525,4 @@ finish();
 			return _view;
 		}
 	}
-	
-	@Deprecated
-	public void showMessage(String _s) {
-		Toast.makeText(getApplicationContext(), _s, Toast.LENGTH_SHORT).show();
-	}
-	
-	@Deprecated
-	public int getLocationX(View _v) {
-		int _location[] = new int[2];
-		_v.getLocationInWindow(_location);
-		return _location[0];
-	}
-	
-	@Deprecated
-	public int getLocationY(View _v) {
-		int _location[] = new int[2];
-		_v.getLocationInWindow(_location);
-		return _location[1];
-	}
-	
-	@Deprecated
-	public int getRandom(int _min, int _max) {
-		Random random = new Random();
-		return random.nextInt(_max - _min + 1) + _min;
-	}
-	
-	@Deprecated
-	public ArrayList<Double> getCheckedItemPositionsToArray(ListView _list) {
-		ArrayList<Double> _result = new ArrayList<Double>();
-		SparseBooleanArray _arr = _list.getCheckedItemPositions();
-		for (int _iIdx = 0; _iIdx < _arr.size(); _iIdx++) {
-			if (_arr.valueAt(_iIdx))
-			_result.add((double)_arr.keyAt(_iIdx));
-		}
-		return _result;
-	}
-	
-	@Deprecated
-	public float getDip(int _input) {
-		return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, _input, getResources().getDisplayMetrics());
-	}
-	
-	@Deprecated
-	public int getDisplayWidthPixels() {
-		return getResources().getDisplayMetrics().widthPixels;
-	}
-	
-	@Deprecated
-	public int getDisplayHeightPixels() {
-		return getResources().getDisplayMetrics().heightPixels;
-	}
-}
+}

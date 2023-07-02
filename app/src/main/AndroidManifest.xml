@@ -19,16 +19,16 @@
 			android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
 			android:hardwareAccelerated="true"
 			android:supportsPictureInPicture="true"
-			android:exported="true"
-			android:screenOrientation="portrait" />
+			android:screenOrientation="portrait"
+			android:exported="true" />
 		<activity
 			android:name=".SplashActivity"
 			android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
 			android:hardwareAccelerated="true"
 			android:supportsPictureInPicture="true"
 			android:theme="@style/AppTheme.FullScreen"
-			android:exported="true"
-			android:screenOrientation="portrait">
+			android:screenOrientation="portrait"
+			android:exported="true">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.LAUNCHER" />
